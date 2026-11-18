@@ -45,8 +45,8 @@ def demo_full_pipeline(A, d, name, expected_beta=None):
 
 if __name__ == "__main__":
     # ---------- Класс I: M/M/1 ----------
-    A, d = example_MM1(lam=1.0, mu=4.0, S=5)
     lam, mu, S = 1.0, 4.0, 5
+    A, d = example_MM1(lam=lam, mu=mu, S=S)
     beta_exact = lam + mu - 2 * np.sqrt(lam * mu) * np.cos(np.pi / (S + 1))
     result = demo_full_pipeline(A, d,
                                 "M/M/1, λ=1, μ=4, S=5 (класс I)",

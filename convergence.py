@@ -14,7 +14,6 @@ def get_stationary_distribution(A):
     """Находит стационарное распределение pi (решение A^T pi = 0, сумма pi = 1)."""
 
     n = A.shape[0]
-
     M = A.copy()
 
     M[-1, :] = 1.0
